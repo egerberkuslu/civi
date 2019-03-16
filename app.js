@@ -1,5 +1,5 @@
 
-const aralik = 20;
+const aralik = 30;
 var noktaSayisi = 1;
 function obeb(x, y) {
     if ((typeof x !== 'number') || (typeof y !== 'number'))
@@ -15,13 +15,17 @@ function obeb(x, y) {
 }
 
 function uzaklikKontrolu(x, y, aX, bY) {
-    controller = false;
+   let controller;
     let index;
-    for (index = 0; index <= noktaSayisi; index++) {
-        if (aralik*aralik < (x[index] - aX) * (x[index] - aX) + (y[index] - bY) * (y[index] - bY)) {
+    for (index = 0; index < noktaSayisi; index++) {
+        if ( ((x[index] - aX)*(x[index] - aX)) + ((y[index] - bY)*(y[index] - bY)) > (aralik*aralik) ) {
             controller = true;
-            break;
         }
+		else{
+			controller = false;
+			break;
+		}
+		
     }
     return controller;
 }
@@ -34,9 +38,9 @@ function noktaYaratici(x, y, obebSayisi, boyutX, maxNokta, index) {
     for (let i = 0; i < maxNokta; i++) {
         do {
             aX = (Math.floor(Math.random() * boyutX));
-            bY = (Math.floor(Math.random() * obebSayisi) + ((index * obebSayisi) - obebSayisi));
+            bY = (Math.floor(Math.random() * obebSayisi) + ( (index * obebSayisi) - (obebSayisi)  ));
             is_okey = uzaklikKontrolu(x, y, aX, bY);
-        } while (!is_okey);
+        } while (is_okey == false);
         x[noktaSayisi] = aX;
         y[noktaSayisi] = bY;
         noktaSayisi++;
