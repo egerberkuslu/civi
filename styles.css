@@ -65,12 +65,43 @@ body {
     position: relative;
 }
 
+#p1:hover{
+    color: green;
+}
 #p2:hover{
     color: green;
 }
 #p3:hover{
     color: green;
 }
-.body > p {
+#p4:hover{
     color: green;
 }
+#p5:hover{
+    color: green;
+}
+#p6:hover{
+    color: green;
+}
+#p7:hover{
+    color: green;
+}
+#p8:hover{
+    color: green;
+}
+#p9:hover{
+    color: green;
+}
+#p10:hover{
+    color: green;
+}
+#p11:hover{
+    color: green;
+}
+#p12:hover{
+    color: green;
+}
+#p13:hover{
+    color: green;
+}
+
