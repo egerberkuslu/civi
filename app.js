@@ -1,5 +1,5 @@
 
-const aralik = 30;
+const aralik = 20;
 var noktaSayisi = 1;
 function obeb(x, y) {
     if ((typeof x !== 'number') || (typeof y !== 'number'))
@@ -66,6 +66,11 @@ function main() {
     }
     console.log(alanSayisi);
     console.log(x, y);
+	boyutY = boyutY;
+	document.getElementById("oyun-alani").style.width = boyutX.toString()+"px";
+    document.getElementById("oyun-alani").style.height = boyutY.toString()+"px";
+	
+	
     document.getElementById("p1").style.left = x[0].toString()+"px";
     document.getElementById("p1").style.top = y[0].toString()+"px";
     document.getElementById("p2").style.left = x[1].toString()+"px";
